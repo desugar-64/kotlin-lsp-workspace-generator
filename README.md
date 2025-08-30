@@ -568,14 +568,6 @@ workspace.json                          # Main LSP workspace configuration
 └── tasks.json                          # Gradle build tasks
 ```
 
-## 📊 Processing Statistics
-
-Current plugin successfully processes:
-- **33 AAR files** → properly named JAR files (e.g., `runtime-android-1.9.0.jar`)
-- **25+ source attachments** for navigation support
-- **1 Android SDK integration** with platform sources
-- **1 ComposableFunction stubs JAR** for Compose compatibility
-
 ## 🐛 Known Limitations
 
 ### 1. **Compose Type Errors (Unfixable)**
