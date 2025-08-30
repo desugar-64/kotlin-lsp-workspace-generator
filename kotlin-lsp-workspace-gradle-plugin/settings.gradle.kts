@@ -1,0 +1,1 @@
+rootProject.name = "kotlin-lsp-workspace-gradle-plugin"

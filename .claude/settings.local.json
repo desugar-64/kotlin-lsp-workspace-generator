@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew:*)",
+      "Bash(sed:*)",
+      "Bash(cat:*)",
+      "Bash(jar:*)",
+      "Bash(find:*)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/src/com/jetbrains/ls/imports/json/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/src/com/jetbrains/ls/imports/json/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/src/com/jetbrains/ls/imports/json/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/src/com/jetbrains/ls/imports/json/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/Dependencies/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/AndroidTestWorkspace/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/MultiProjectKotlinDSL/**)",
+      "Read(/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/Dependencies/**)",
+      "Bash(rm:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "/private/tmp/compose-stubs",
+      "/Users/syaremych/.gradle/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-android/1.9.0",
+      "/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/AndroidTestWorkspace",
+      "/Users/syaremych/dev/projects/kotlin-lsp/workspace-import/test/testData/gradle/MultiProjectKotlinDSL"
+    ]
+  }
+}

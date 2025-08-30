@@ -1,0 +1,63 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Android: Build & Install",
+            "type": "shell",
+            "request": "launch",
+            "command": "./gradlew",
+            "args": ["installDebug"],
+            "group": "android",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "group": "android"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gradle"]
+        },
+        {
+            "name": "Android: Build & Launch App",
+            "type": "shell",
+            "request": "launch",
+            "command": "./gradlew", 
+            "args": ["installDebug"],
+            "group": "android",
+            "presentation": {
+                "echo": true,
+                "reveal": "always", 
+                "focus": false,
+                "panel": "shared",
+                "group": "android"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gradle"],
+            "postLaunchTask": "Android: Launch App"
+        },
+        {
+            "name": "Android: Build Release",
+            "type": "shell",
+            "request": "launch",
+            "command": "./gradlew",
+            "args": ["assembleRelease"], 
+            "group": "android",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false, 
+                "panel": "shared",
+                "group": "android"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gradle"]
+        }
+    ]
+}

@@ -1,0 +1,165 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Android: Build Debug",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": ["assembleDebug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gradle"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "detail": "Build debug APK using Gradle"
+        },
+        {
+            "label": "Android: Build Release",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": ["assembleRelease"],
+            "group": "build",
+            "problemMatcher": ["$gradle"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Build release APK using Gradle"
+        },
+        {
+            "label": "Android: Install Debug",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": ["installDebug"],
+            "group": "build",
+            "problemMatcher": ["$gradle"],
+            "dependsOn": "Android: Build Debug",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Build and install debug APK on connected device"
+        },
+        {
+            "label": "Android: Build Debug & Run",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Android: Install Debug",
+                "Android: Launch App"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Build, install, and launch debug app - complete development cycle"
+        },
+        {
+            "label": "Android: Clean Project",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": ["clean"],
+            "group": "build",
+            "problemMatcher": ["$gradle"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Clean build artifacts"
+        },
+        {
+            "label": "Android: List Devices",
+            "type": "shell",
+            "command": "adb",
+            "args": ["devices", "-l"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "List connected Android devices and emulators"
+        },
+        {
+            "label": "Android: View Logs",
+            "type": "shell",
+            "command": "adb",
+            "args": ["logcat", "-v", "color"],
+            "group": "test",
+            "isBackground": true,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated"
+            },
+            "detail": "View device logs (logcat)"
+        },
+        {
+            "label": "Android: Clear App Data",
+            "type": "shell",
+            "command": "adb",
+            "args": ["shell", "pm", "clear", "{{APPLICATION_ID}}"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Clear application data on device"
+        },
+        {
+            "label": "Android: Launch App",
+            "type": "shell",
+            "command": "adb",
+            "args": [
+                "shell",
+                "am",
+                "start",
+                "-n",
+                "{{APPLICATION_ID}}/{{MAIN_ACTIVITY}}"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Launch application on device"
+        },
+        {
+            "label": "Android: Uninstall Debug",
+            "type": "shell",
+            "command": "./gradlew",
+            "args": ["uninstallDebug"],
+            "group": "build",
+            "problemMatcher": ["$gradle"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "detail": "Uninstall debug APK from device"
+        }
+    ]
+}

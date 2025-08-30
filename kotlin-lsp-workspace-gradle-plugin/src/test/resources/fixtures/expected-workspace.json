@@ -1,0 +1,1371 @@
+{
+    "modules": [
+{
+            "name": "app.main",
+            "dependencies": [
+                {
+                    "type": "library",
+                    "name": "Gradle: android:android:36",
+                    "scope": "provided"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.activity:activity-compose:1.10.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.activity:activity-ktx:1.10.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.activity:activity:1.10.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.annotation:annotation-experimental:1.4.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.annotation:annotation-jvm:1.9.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.arch.core:core-common:2.2.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.collection:collection-jvm:1.5.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.animation:animation-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.animation:animation-core-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.foundation:foundation-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.foundation:foundation-layout-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.material3:material3-android:1.3.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.material:material-icons-core-android:1.7.8",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.material:material-ripple-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.runtime:runtime-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.runtime:runtime-annotation-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.runtime:runtime-saveable-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-geometry-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-graphics-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-test-manifest:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-text-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-tooling-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-tooling-data-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-tooling-preview-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-unit-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.compose.ui:ui-util-android:1.9.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.core:core-ktx:1.17.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.core:core-viewtree:1.0.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.core:core:1.17.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-common-jvm:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-livedata-core:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-runtime-android:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-runtime-compose-android:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-viewmodel-android:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.2",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.savedstate:savedstate-android:1.3.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.savedstate:savedstate-compose-android:1.3.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.savedstate:savedstate-ktx:1.3.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: com.google.guava:listenablefuture:1.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:2.2.10",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: org.jetbrains:annotations:23.0.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "library",
+                    "name": "Gradle: org.jspecify:jspecify:1.0.0",
+                    "scope": "compile"
+                },
+                {
+                    "type": "moduleSource"
+                },
+                {
+                    "type": "inheritedSdk"
+                }
+            ],
+            "contentRoots": [
+                {
+                    "path": "<WORKSPACE>/app",
+                    "excludedPatterns": [],
+                    "excludedUrls": [],
+                    "sourceRoots": [
+    {
+        "path": "<WORKSPACE>/app/src/main/java",
+        "type": "java-source"
+    }
+                    ]
+                }
+            ],
+            "facets": []
+        }
+    ],
+    "libraries": [
+{
+    "name": "Gradle: androidx.activity:activity-compose:1.10.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/activity-compose-1.10.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/activity-compose-1.10.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.activity",
+            "artifactId": "activity-compose",
+            "version": "1.10.1",
+            "baseVersion": "1.10.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.activity:activity-ktx:1.10.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/activity-ktx-1.10.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/activity-ktx-1.10.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.activity",
+            "artifactId": "activity-ktx",
+            "version": "1.10.1",
+            "baseVersion": "1.10.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.activity:activity:1.10.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/activity-1.10.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/activity-1.10.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.activity",
+            "artifactId": "activity",
+            "version": "1.10.1",
+            "baseVersion": "1.10.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.annotation:annotation-experimental:1.4.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/annotation-experimental-1.4.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/annotation-experimental-1.4.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.annotation",
+            "artifactId": "annotation-experimental",
+            "version": "1.4.1",
+            "baseVersion": "1.4.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.annotation:annotation-jvm:1.9.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/annotation-jvm-1.9.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/annotation-jvm-1.9.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.annotation",
+            "artifactId": "annotation-jvm",
+            "version": "1.9.1",
+            "baseVersion": "1.9.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.arch.core:core-common:2.2.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-common-2.2.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-common-2.2.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.arch.core",
+            "artifactId": "core-common",
+            "version": "2.2.0",
+            "baseVersion": "2.2.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.collection:collection-jvm:1.5.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/collection-jvm-1.5.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/collection-jvm-1.5.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.collection",
+            "artifactId": "collection-jvm",
+            "version": "1.5.0",
+            "baseVersion": "1.5.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.animation:animation-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/animation-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/animation-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.animation",
+            "artifactId": "animation-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.animation:animation-core-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/animation-core-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/animation-core-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.animation",
+            "artifactId": "animation-core-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.foundation:foundation-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/foundation-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/foundation-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.foundation",
+            "artifactId": "foundation-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.foundation:foundation-layout-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/foundation-layout-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/foundation-layout-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.foundation",
+            "artifactId": "foundation-layout-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.material3:material3-android:1.3.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/material3-android-1.3.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/material3-android-1.3.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.material3",
+            "artifactId": "material3-android",
+            "version": "1.3.2",
+            "baseVersion": "1.3.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.material:material-icons-core-android:1.7.8",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/material-icons-core-android-1.7.8.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/material-icons-core-android-1.7.8-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.material",
+            "artifactId": "material-icons-core-android",
+            "version": "1.7.8",
+            "baseVersion": "1.7.8"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.material:material-ripple-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/material-ripple-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/material-ripple-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.material",
+            "artifactId": "material-ripple-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.runtime:runtime-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/runtime-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/runtime-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.runtime",
+            "artifactId": "runtime-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.runtime:runtime-annotation-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/runtime-annotation-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/runtime-annotation-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.runtime",
+            "artifactId": "runtime-annotation-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.runtime:runtime-saveable-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/runtime-saveable-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/runtime-saveable-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.runtime",
+            "artifactId": "runtime-saveable-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-geometry-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-geometry-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-geometry-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-geometry-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-graphics-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-graphics-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-graphics-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-graphics-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-test-manifest:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-test-manifest-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-test-manifest-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-test-manifest",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-text-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-text-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-text-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-text-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-tooling-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-tooling-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-tooling-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-tooling-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-tooling-data-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-tooling-data-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-tooling-data-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-tooling-data-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-tooling-preview-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-tooling-preview-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-tooling-preview-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-tooling-preview-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-unit-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-unit-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-unit-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-unit-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.compose.ui:ui-util-android:1.9.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-util-android-1.9.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/ui-util-android-1.9.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.compose.ui",
+            "artifactId": "ui-util-android",
+            "version": "1.9.0",
+            "baseVersion": "1.9.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.core:core-ktx:1.17.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-ktx-1.17.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-ktx-1.17.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.core",
+            "artifactId": "core-ktx",
+            "version": "1.17.0",
+            "baseVersion": "1.17.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.core:core-viewtree:1.0.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-viewtree-1.0.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-viewtree-1.0.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.core",
+            "artifactId": "core-viewtree",
+            "version": "1.0.0",
+            "baseVersion": "1.0.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.core:core:1.17.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-1.17.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/core-1.17.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.core",
+            "artifactId": "core",
+            "version": "1.17.0",
+            "baseVersion": "1.17.0"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-common-jvm:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-common-jvm-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-common-jvm-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-common-jvm",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-livedata-core:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-livedata-core-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-livedata-core-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-livedata-core",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-runtime-android:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-runtime-android-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-runtime-android-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-runtime-android",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-runtime-compose-android:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-runtime-compose-android-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-runtime-compose-android-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-runtime-compose-android",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-runtime-ktx-android-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-runtime-ktx-android-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-runtime-ktx-android",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-viewmodel-android:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-viewmodel-android-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-viewmodel-android-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-viewmodel-android",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-viewmodel-ktx-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-viewmodel-ktx-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-viewmodel-ktx",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.2",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-viewmodel-savedstate-android-2.9.2.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/lifecycle-viewmodel-savedstate-android-2.9.2-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.lifecycle",
+            "artifactId": "lifecycle-viewmodel-savedstate-android",
+            "version": "2.9.2",
+            "baseVersion": "2.9.2"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.savedstate:savedstate-android:1.3.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/savedstate-android-1.3.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/savedstate-android-1.3.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.savedstate",
+            "artifactId": "savedstate-android",
+            "version": "1.3.1",
+            "baseVersion": "1.3.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.savedstate:savedstate-compose-android:1.3.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/savedstate-compose-android-1.3.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/savedstate-compose-android-1.3.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.savedstate",
+            "artifactId": "savedstate-compose-android",
+            "version": "1.3.1",
+            "baseVersion": "1.3.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.savedstate:savedstate-ktx:1.3.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/savedstate-ktx-1.3.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/savedstate-ktx-1.3.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.savedstate",
+            "artifactId": "savedstate-ktx",
+            "version": "1.3.1",
+            "baseVersion": "1.3.1"
+        }
+    }
+},
+{
+    "name": "Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/versionedparcelable-1.1.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/versionedparcelable-1.1.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "androidx.versionedparcelable",
+            "artifactId": "versionedparcelable",
+            "version": "1.1.1",
+            "baseVersion": "1.1.1"
+        }
+    }
+},
+{
+    "name": "Gradle: com.google.guava:listenablefuture:1.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/listenablefuture-1.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/listenablefuture-1.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "com.google.guava",
+            "artifactId": "listenablefuture",
+            "version": "1.0",
+            "baseVersion": "1.0"
+        }
+    }
+},
+{
+    "name": "Gradle: org.jetbrains.kotlin:kotlin-stdlib:2.2.10",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlin-stdlib-2.2.10.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlin-stdlib-2.2.10-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "org.jetbrains.kotlin",
+            "artifactId": "kotlin-stdlib",
+            "version": "2.2.10",
+            "baseVersion": "2.2.10"
+        }
+    }
+},
+{
+    "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlinx-coroutines-android-1.8.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlinx-coroutines-android-1.8.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "org.jetbrains.kotlinx",
+            "artifactId": "kotlinx-coroutines-android",
+            "version": "1.8.1",
+            "baseVersion": "1.8.1"
+        }
+    }
+},
+{
+    "name": "Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlinx-coroutines-core-jvm-1.8.1.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlinx-coroutines-core-jvm-1.8.1-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "org.jetbrains.kotlinx",
+            "artifactId": "kotlinx-coroutines-core-jvm",
+            "version": "1.8.1",
+            "baseVersion": "1.8.1"
+        }
+    }
+},
+{
+    "name": "Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.7.3",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlinx-serialization-core-jvm-1.7.3.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/kotlinx-serialization-core-jvm-1.7.3-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "org.jetbrains.kotlinx",
+            "artifactId": "kotlinx-serialization-core-jvm",
+            "version": "1.7.3",
+            "baseVersion": "1.7.3"
+        }
+    }
+},
+{
+    "name": "Gradle: org.jetbrains:annotations:23.0.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/annotations-23.0.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/annotations-23.0.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "org.jetbrains",
+            "artifactId": "annotations",
+            "version": "23.0.0",
+            "baseVersion": "23.0.0"
+        }
+    }
+},
+{
+    "name": "Gradle: org.jspecify:jspecify:1.0.0",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/jspecify-1.0.0.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/jspecify-1.0.0-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "org.jspecify",
+            "artifactId": "jspecify",
+            "version": "1.0.0",
+            "baseVersion": "1.0.0"
+        }
+    }
+},
+{
+    "name": "Gradle: android:android:36",
+    "type": "java-imported",
+    "roots": [
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/android-36.jar"
+        },
+        {
+            "path": "/Users/syaremych/dev/projects/vs-code-test/build/.lsp-temp/android-36-sources.jar",
+            "type": "SOURCES"
+        }
+    ],
+    "properties": {
+        "attributes": {
+            "groupId": "android",
+            "artifactId": "android",
+            "version": "36",
+            "baseVersion": "36"
+        }
+    }
+}
+    ],
+    "sdks": [
+
+        {
+            "name": "Android API ",
+            "type": "Android", 
+            "version": "",
+            "homePath": "/Users/syaremych/dev/android-sdk",
+            "additionalData": ""
+        }
+    ],
+    "kotlinSettings": [
+
+        {
+            "name": "Kotlin",
+            "sourceRoots": [],
+            "configFileItems": [],
+            "module": "app.main",
+            "useProjectSettings": true,
+            "implementedModuleNames": [],
+            "dependsOnModuleNames": [],
+            "additionalVisibleModuleNames": [],
+            "productionOutputPath": null,
+            "testOutputPath": null,
+            "sourceSetNames": [],
+            "isTestModule": false,
+            "externalProjectId": "",
+            "isHmppEnabled": true,
+            "pureKotlinSourceFolders": [],
+            "kind": "default",
+            "compilerArguments": null,
+            "additionalArguments": null,
+            "scriptTemplates": null,
+            "scriptTemplatesClasspath": null,
+            "outputDirectoryForJsLibraryFiles": null,
+            "targetPlatform": null,
+            "externalSystemRunTasks": [],
+            "version": 5,
+            "flushNeeded": false
+        }
+    ]
+}

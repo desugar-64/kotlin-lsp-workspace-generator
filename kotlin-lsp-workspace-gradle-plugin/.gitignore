@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+.kotlin/
+build/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test artifacts
+*.tmp
