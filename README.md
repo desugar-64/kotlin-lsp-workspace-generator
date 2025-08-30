@@ -3,7 +3,7 @@
 > [!WARNING]
 > Experimental project with limited functionality. Many features don't work as expected since Kotlin LSP only supports JVM targets.
 
-![Kotlin LSP Gradle Demo](image/kotlin_lsp_gradle_demo.png)
+<img src="image/kotli_lsp_gradle_demo.png" alt="Kotlin LSP Gradle Demo" width="800">
 
 ## 🚀 How to Use This Plugin
 
