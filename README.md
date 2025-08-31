@@ -116,8 +116,6 @@ A comprehensive Gradle plugin that generates workspace configuration files for t
 **Extension**: `kotlinLspWorkspace { }`  
 **Architecture**: Standalone Gradle plugin with composite build integration
 
-> **📦 Migration Note**: This plugin was recently migrated from `buildSrc` to a standalone module for better versioning, distribution, and development workflow. All functionality remains identical.
-
 ## ⚡ Quick Start
 
 ```kotlin
