@@ -1,7 +1,7 @@
 # Kotlin LSP Workspace Generator Plugin
 
 > [!WARNING]
-> Experimental project with limited functionality. Many features don't work as expected since Kotlin LSP only supports JVM targets.
+> Experimental project with limited functionality. Many features don't work as expected since [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) only supports JVM targets.
 
 <img src="image/kotli_lsp_gradle_demo.png" alt="Kotlin LSP Gradle Demo" width="800">
 
@@ -25,9 +25,9 @@
 
 ## 🚀 How to Use This Plugin
 
-This experimental plugin was created out of curiosity to explore if Android development is possible in IDEs other than Android Studio. After JetBrains released the official Kotlin Language Server Protocol (LSP), this opportunity became real.
+This experimental plugin was created out of curiosity to explore if Android development is possible in IDEs other than [Android Studio](https://developer.android.com/studio). After JetBrains released the official [Kotlin Language Server Protocol (LSP)](https://github.com/Kotlin/kotlin-lsp), this opportunity became real.
 
-Android Studio remains unmatched and always will be, but if you need a lightweight editor with auto-completion, auto-imports (crucial for Jetpack Compose), and type checking, this might work.
+[Android Studio](https://developer.android.com/studio) remains unmatched and always will be, but if you need a lightweight editor with auto-completion, auto-imports (crucial for Jetpack Compose), and type checking, this might work.
 
 ### Prerequisites
 - **JAVA_HOME** environment variable set
@@ -90,7 +90,7 @@ Android Studio remains unmatched and always will be, but if you need a lightweig
    - **Use Terminal → Run Task to access Android build commands like "Android: Build Debug & Run", "Android: Install Debug", etc.**
 
 ### What You Get
-The Kotlin LSP currently supports **JVM modules only** (Android/multiplatform support is on their roadmap). This plugin bridges that gap by helping Kotlin LSP understand Android project dependencies:
+The [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) currently supports **JVM modules only** (Android/multiplatform support is on their roadmap). This plugin bridges that gap by helping [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) understand Android project dependencies:
 
 - **Navigate to source** of AndroidX, Compose, and other Android libraries
 - **Code completion** for Android APIs and dependencies  
@@ -98,11 +98,11 @@ The Kotlin LSP currently supports **JVM modules only** (Android/multiplatform su
 - **Syntax highlighting** with basic error detection
 
 ### ⚠️ Important Limitations
-- **Jetpack Compose**: The plugin cannot fix Compose compiler issues. Compose uses compile-time transformations that LSP doesn't understand, so you'll see type errors (code still compiles correctly)
-- **Android-specific features**: LSP doesn't understand Android manifest, resources, or build variants
-- **Full IDE features**: For complete Android development, Android Studio remains the best choice
+- **Jetpack Compose**: The plugin cannot fix Compose compiler issues. Compose uses compile-time transformations that [LSP](https://github.com/Kotlin/kotlin-lsp) doesn't understand, so you'll see type errors (code still compiles correctly)
+- **Android-specific features**: [LSP](https://github.com/Kotlin/kotlin-lsp) doesn't understand Android manifest, resources, or build variants
+- **Full IDE features**: For complete Android development, [Android Studio](https://developer.android.com/studio) remains the best choice
 
-This plugin makes Kotlin LSP usable for Android projects but doesn't provide the full Android Studio experience.
+This plugin makes [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) usable for Android projects but doesn't provide the full [Android Studio](https://developer.android.com/studio) experience.
 
 ---
 
@@ -116,7 +116,7 @@ A comprehensive Gradle plugin that generates workspace configuration files for t
 
 ## 🎯 Purpose
 
-The **Kotlin LSP Workspace Generator Plugin** solves the problem of setting up proper IDE-like support for Android Kotlin projects in lightweight editors. It automatically generates a `workspace.json` file that the Kotlin LSP uses to:
+The **Kotlin LSP Workspace Generator Plugin** solves the problem of setting up proper IDE-like support for Android Kotlin projects in lightweight editors. It automatically generates a `workspace.json` file that the [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) uses to:
 
 - **Navigate to library sources** - Jump to definitions in AndroidX, Compose, and other dependencies
 - **Code completion** - Intelligent autocomplete for Kotlin and Android APIs
@@ -128,12 +128,12 @@ The **Kotlin LSP Workspace Generator Plugin** solves the problem of setting up p
 
 Android projects have complex dependency structures with AARs, multiple source sets, SDK libraries, and Compose compiler transformations. Without proper configuration:
 
-- LSP cannot find library JARs and source attachments
+- [LSP](https://github.com/Kotlin/kotlin-lsp) cannot find library JARs and source attachments
 - Navigation to Android SDK sources fails
 - Compose-specific types are not recognized
 - Code completion is limited to project sources only
 
-This plugin **automatically detects** your project structure and **generates the correct workspace configuration** without manual setup.
+This plugin **automatically detects** your project structure and **generates the correct workspace configuration** for [LSP](https://github.com/Kotlin/kotlin-lsp) without manual setup.
 
 ## ⚡ Quick Start
 
@@ -147,11 +147,11 @@ plugins {
 ./gradlew generateKotlinLspWorkspace
 ```
 
-**⚠️ Known Issue**: Compose projects will show cosmetic type errors in LSP. See [Error Suppression](#-temporary-error-suppression) for workarounds.
+**⚠️ Known Issue**: Compose projects will show cosmetic type errors in [LSP](https://github.com/Kotlin/kotlin-lsp). See [Error Suppression](#-temporary-error-suppression) for workarounds.
 
 ## 🏗️ Architecture
 
-The plugin implements a **4-task pipeline** that transforms a complex Android project into an LSP-compatible workspace:
+The plugin implements a **4-task pipeline** that transforms a complex Android project into an [LSP](https://github.com/Kotlin/kotlin-lsp)-compatible workspace:
 
 ```
 ./gradlew generateKotlinLspWorkspace
@@ -251,7 +251,7 @@ fun processAarFile(aarFile: File, tempDir: File, targetJarName: String): File? {
   "modules": [ /* Project modules with dependencies */ ],
   "libraries": [ /* All JARs with sources */ ],
   "sdks": [ /* Android SDK info */ ],
-  "kotlinSettings": [ /* Kotlin LSP config */ ]
+  "kotlinSettings": [ /* [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) config */ ]
 }
 ```
 
@@ -612,14 +612,12 @@ workspace.json                          # Main LSP workspace configuration
 ```kotlin
 @Composable fun MyComposable() { /* LSP shows type errors */ }
 ```
-- **Issue**: LSP analyzes source code before Compose compiler transformations
-- **Cause**: Compose compiler changes function signatures during compilation
-- **Status**: **❌ Cannot fix** - fundamental LSP limitation
+- **Issue**: [LSP](https://github.com/Kotlin/kotlin-lsp) analyzes source code before Compose compiler transformations
+- **Status**: **❌ Cannot fix** - fundamental [LSP](https://github.com/Kotlin/kotlin-lsp) limitation
 - **Workaround**: Errors are cosmetic, code compiles correctly
 
 ### 2. **Java Source Navigation (LSP Limitation)**
 - **Issue**: Cannot navigate to Java source files in Android SDK
-- **Cause**: Kotlin LSP focuses on Kotlin-first development
 - **Status**: **❌ Cannot fix** - use IntelliJ IDEA for full Java support
 
 ### 3. **Compose Type Errors (Major Limitation)**
@@ -631,16 +629,15 @@ workspace.json                          # Main LSP workspace configuration
 ```
 - **Root Cause**: `ComposableFunction0-N` types are **phantom types** that only exist during Compose compiler transformation. They are not real classes that can be placed on classpath.
 - **Technical Details**: 
-  - LSP analyzes **source code** (sees `Function0<Unit>`)
+  - [LSP](https://github.com/Kotlin/kotlin-lsp) analyzes **source code** (sees `Function0<Unit>`)
   - Compose compiler **transforms types** during compilation (creates virtual `ComposableFunction0<Unit>`)  
-  - LSP expects **post-transformation types** but only has access to **pre-transformation source**
-- **Status**: **❌ Cannot fix** - fundamental LSP architecture limitation
+  - [LSP](https://github.com/Kotlin/kotlin-lsp) expects **post-transformation types** but only has access to **pre-transformation source**
+- **Status**: **❌ Cannot fix** - fundamental [LSP](https://github.com/Kotlin/kotlin-lsp) architecture limitation
 - **Impact**: Cosmetic errors only - **code compiles and runs correctly**
 - **Workaround**: See [Temporary Error Suppression](#-temporary-error-suppression)
 
 ### 4. **Cross-Library Navigation in Sources**
 - **Issue**: Cannot navigate between different library source files
-- **Cause**: Known Kotlin LSP bug with cross-library references
 - **Status**: **Cannot fix** - tracked by JetBrains
 
 ## 🔧 Temporary Error Suppression
@@ -719,7 +716,7 @@ kotlin-lsp-workspace-gradle-plugin/
 
 ---
 
-**Generated by**: Kotlin LSP Workspace Generator Plugin  
+**Generated by**: [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) Workspace Generator Plugin  
 **Plugin ID**: `dev.serhiiyaremych.kotlin.lsp.workspace`  
 **Version**: 1.0.0-SNAPSHOT  
 **Last Updated**: August 2025  
