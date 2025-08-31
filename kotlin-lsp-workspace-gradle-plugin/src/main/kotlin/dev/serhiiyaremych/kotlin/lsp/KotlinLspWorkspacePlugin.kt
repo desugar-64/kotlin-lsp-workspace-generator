@@ -3,6 +3,10 @@ package dev.serhiiyaremych.kotlin.lsp
 import org.gradle.api.*
 import org.gradle.api.tasks.*
 
+// Optional imports - only available if Android plugin is applied
+import com.android.build.gradle.AppExtension
+import com.android.build.gradle.LibraryExtension
+
 class KotlinLspWorkspacePlugin : Plugin<Project> {
     override fun apply(project: Project) {
         val extension = project.extensions.create("kotlinLspWorkspace", KotlinLspWorkspaceExtension::class.java)
@@ -51,8 +55,8 @@ class KotlinLspWorkspacePlugin : Plugin<Project> {
             vsCodeDirectory.set(extension.vsCodeDirectory)
             generateLaunchJson.set(extension.generateLaunchJson)
             generateTasksJson.set(extension.generateTasksJson)
-            mainActivity.set(extension.mainActivityName)
-            applicationId.convention("com.example.vscodetest")
+            mainActivity.set(extension.launcherActivity)
+            applicationId.set(extension.applicationId)
         }
         
         // Auto-regenerate when dependencies change (if enabled)
@@ -101,6 +105,7 @@ class KotlinLspWorkspacePlugin : Plugin<Project> {
             }
         }
     }
+    
     
     private fun detectKotlinVersion(project: Project): String? {
         // Try to read kotlin version from gradle/libs.versions.toml

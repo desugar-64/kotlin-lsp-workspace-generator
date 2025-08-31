@@ -12,10 +12,11 @@ version = "1.0.0-SNAPSHOT"
 
 repositories {
     gradlePluginPortal()
+    google()
     mavenCentral()
 }
 
-kotlin {
+tasks.withType<KotlinCompile>().configureEach {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
@@ -23,6 +24,7 @@ kotlin {
 
 dependencies {
     implementation("org.json:json:20250517")
+    compileOnly(libs.agp) // Access Android plugin types safely
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
     testImplementation("org.assertj:assertj-core:3.27.4")
     testImplementation("com.google.code.gson:gson:2.13.1")

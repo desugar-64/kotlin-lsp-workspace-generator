@@ -21,7 +21,8 @@ kotlinLspWorkspace {
     vsCodeDirectory.set(file(".vscode"))       // default
     generateLaunchJson.set(false)              // disabled - launch configs don't work in VS Code
     generateTasksJson.set(true)                // generate tasks.json  
-    mainActivityName.set("MainActivity")       // default activity name
+    applicationId.set("com.example.vscodetest")  // Your app's package name
+    launcherActivity.set("MainActivity")         // Your main activity class
 }
 
 // Original monolithic task for comparison

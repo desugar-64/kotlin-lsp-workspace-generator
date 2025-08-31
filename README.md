@@ -51,7 +51,21 @@ Android Studio remains unmatched and always will be, but if you need a lightweig
    # or sync Gradle project (auto-regeneration is enabled by default)
    ```
 
-5. **Open in VS Code:**
+4. **Configure your Android app info:**
+   ```kotlin
+   kotlinLspWorkspace {
+       applicationId.set("com.yourapp.package")     // Your app's package name  
+       launcherActivity.set("MainActivity")         // Your main activity class
+   }
+   ```
+
+5. **Generate workspace configuration:**
+   ```bash
+   ./gradlew generateKotlinLspWorkspace
+   # or sync Gradle project (auto-regeneration is enabled by default)
+   ```
+
+6. **Open in VS Code:**
    - Install Kotlin LSP from [GitHub releases](https://github.com/Kotlin/kotlin-lsp)
    - Open your project folder in VS Code
    - **The generated `workspace.json` provides correct dependency paths - Android AARs transformed to JARs with proper source attachments!**
@@ -248,12 +262,15 @@ kotlinLspWorkspace {
     // Auto-regeneration
     autoRegenerate.set(true)                          // Rebuild on dependency changes
     
-    // VS Code Integration
+    // VS Code Integration  
     generateVSCodeConfig.set(true)                    // Create .vscode/ files
     vsCodeDirectory.set(file(".vscode"))              // VS Code config location
     generateLaunchJson.set(true)                      // Android debugging setup
     generateTasksJson.set(true)                       // Build task integration
-    mainActivityName.set("MainActivity")              // Entry point activity
+    
+    // Android App Launch Configuration (REQUIRED for VS Code tasks)
+    applicationId.set("com.yourapp.package")          // Your app's package name
+    launcherActivity.set("MainActivity")              // Your main activity class name
 }
 ```
 
@@ -377,9 +394,12 @@ kotlinLspWorkspace {
     generateComposeStubs.set(false)        // Skip if not using Compose  
     autoRegenerate.set(false)              // Manual regeneration only
     
+    // Android App Configuration  
+    applicationId.set("com.mycompany.myapp")       // Your package name
+    launcherActivity.set("SplashActivity")         // Your launcher activity
+    
     // Custom VS Code setup
     generateVSCodeConfig.set(true)
-    mainActivityName.set("CustomMainActivity")
 }
 ```
 
