@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import kotlin.collections.find
+
 plugins {
     `kotlin-dsl`
     `java-gradle-plugin`
@@ -12,11 +15,17 @@ repositories {
     mavenCentral()
 }
 
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    }
+}
+
 dependencies {
-    implementation("org.json:json:20240303")
+    implementation("org.json:json:20250517")
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
-    testImplementation("org.assertj:assertj-core:3.24.2")
-    testImplementation("com.google.code.gson:gson:2.10.1")
+    testImplementation("org.assertj:assertj-core:3.27.4")
+    testImplementation("com.google.code.gson:gson:2.13.1")
     testImplementation(gradleTestKit())
 }
 

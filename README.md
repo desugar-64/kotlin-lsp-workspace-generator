@@ -108,7 +108,7 @@ This plugin **automatically detects** your project structure and **generates the
 ```kotlin
 // build.gradle.kts
 plugins {
-    id("dev.serhiiyaremych.kotlin.lsp.workspace")
+    id("dev.serhiiyaremych.kotlin.lsp.workspace") version "1.0.0-SNAPSHOT"
 }
 
 // Generate workspace
