@@ -39,7 +39,7 @@ class KotlinLspWorkspacePlugin : Plugin<Project> {
         
         val generateTask = project.tasks.register("generateKotlinLspWorkspace", GenerateWorkspaceTask::class.java) {
             group = "kotlin lsp workspace"
-            description = "Generate Kotlin LSP workspace.json"
+            description = "Generate Kotlin LSP workspace.json and VS Code configuration (if enabled)"
             dependsOn(processTask)
             
             dependencyMetadata.set(processTask.flatMap { it.dependencyMetadata })
@@ -61,6 +61,13 @@ class KotlinLspWorkspacePlugin : Plugin<Project> {
         
         // Auto-regenerate when dependencies change (if enabled)
         project.afterEvaluate {
+            // Configure generateKotlinLspWorkspace to also generate VS Code config if enabled
+            if (extension.generateVSCodeConfig.get()) {
+                generateTask.configure {
+                    finalizedBy(vsCodeTask)
+                }
+            }
+            
             // Auto-detect Kotlin version if not explicitly set by user
             if (!extension.kotlinVersion.isPresent) {
                 val detectedVersion = detectKotlinVersion(project)
