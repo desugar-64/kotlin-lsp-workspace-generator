@@ -157,6 +157,21 @@ kotlinLspWorkspace {
 
 **⚠️ Known Issue**: Compose projects will show cosmetic type errors in [LSP](https://github.com/Kotlin/kotlin-lsp). See [Error Suppression](#-temporary-error-suppression) for workarounds.
 
+### Manual Task Execution
+```bash
+# Generate workspace only
+./gradlew generateKotlinLspWorkspace
+
+# Generate with VS Code config
+./gradlew generateVSCodeConfig
+
+# Clean and regenerate everything
+./gradlew cleanLspTemp generateKotlinLspWorkspace
+
+# See all available tasks
+./gradlew tasks --group="kotlin lsp workspace"
+```
+
 ## 🏗️ Architecture
 
 The plugin implements a **4-task pipeline** that transforms a complex Android project into an [LSP](https://github.com/Kotlin/kotlin-lsp)-compatible workspace:
@@ -341,81 +356,6 @@ Access via **Command Palette** (Ctrl+Shift+P) → type **"Tasks: Run Task"**:
 | **Run Specific Task** | `Ctrl+Shift+P` → "Tasks: Run Task" | Access any Android task |
 | **Terminal** | `Ctrl+`` ` | Direct gradle/adb commands |
 
-### 📋 Typical Development Workflow
-
-1. **🔄 Daily Development** (Fastest):
-   - **Tasks: Run Task** → `Android: Build Debug & Run` 🚀
-   - **One command**: Build → Install → Launch (complete cycle)
-
-2. **🐛 Debugging Issues**:
-   - **Tasks: Run Task** → `Android: View Logs` → continuous logcat monitoring  
-   - **Tasks: Run Task** → `Android: Clear App Data` → reset app state
-   - **Tasks: Run Task** → `Android: List Devices` → verify device connection
-
-3. **📦 Release Preparation**:
-   - **Tasks: Run Task** → `Android: Clean Project` → clean build
-   - **Tasks: Run Task** → `Android: Build Release` → production APK
-
-4. **Manual Control**:
-   - `Ctrl+Shift+B` → builds debug APK only
-   - **Tasks: Run Task** → `Android: Install Debug` → build + install only
-
-### 🚀 Complete Build & Launch Workflow
-```
-Ctrl+Shift+P → "Tasks: Run Task" → "Android: Build Debug & Run"
-   ↓
-Builds debug APK → Installs on device → Launches app
-   ↓  
-Ready for development/testing!
-```
-
-## 🚀 Usage Examples
-
-### Minimal Setup (Recommended)
-```kotlin
-// build.gradle.kts
-plugins {
-    id("dev.serhiiyaremych.kotlin.lsp.workspace")
-}
-
-// That's it! Everything auto-detected.
-```
-
-### Custom Configuration
-```kotlin
-plugins {
-    id("dev.serhiiyaremych.kotlin.lsp.workspace")
-}
-
-kotlinLspWorkspace {
-    workspaceFile.set(file("custom-workspace.json"))
-    includeTestDependencies.set(true)      // Include test libraries
-    generateComposeStubs.set(false)        // Skip if not using Compose  
-    autoRegenerate.set(false)              // Manual regeneration only
-    
-    // Android App Configuration  
-    applicationId.set("com.mycompany.myapp")       // Your package name
-    launcherActivity.set("SplashActivity")         // Your launcher activity
-    
-    // Custom VS Code setup
-    generateVSCodeConfig.set(true)
-}
-```
-
-### Manual Task Execution
-```bash
-# Generate workspace only
-./gradlew generateKotlinLspWorkspace
-
-# Generate with VS Code config
-./gradlew generateVSCodeConfig
-
-# Clean and regenerate everything
-./gradlew cleanLspTemp generateKotlinLspWorkspace
-
-# See all available tasks
-./gradlew tasks --group="kotlin lsp workspace"
-```
 
 ## 🔍 Auto-Detection Features
 
