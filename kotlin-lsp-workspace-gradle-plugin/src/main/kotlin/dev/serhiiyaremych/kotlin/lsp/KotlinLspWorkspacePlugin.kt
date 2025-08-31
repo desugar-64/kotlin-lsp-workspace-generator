@@ -59,14 +59,17 @@ class KotlinLspWorkspacePlugin : Plugin<Project> {
             applicationId.set(extension.applicationId)
         }
         
+        // Configure generateKotlinLspWorkspace to also generate VS Code config if enabled
+        // Use a provider to make it lazy but still available at configuration time
+        generateTask.configure {
+            val shouldGenerateVSCode = extension.generateVSCodeConfig
+            finalizedBy(project.provider {
+                if (shouldGenerateVSCode.get()) listOf(vsCodeTask.get()) else emptyList()
+            })
+        }
+        
         // Auto-regenerate when dependencies change (if enabled)
         project.afterEvaluate {
-            // Configure generateKotlinLspWorkspace to also generate VS Code config if enabled
-            if (extension.generateVSCodeConfig.get()) {
-                generateTask.configure {
-                    finalizedBy(vsCodeTask)
-                }
-            }
             
             // Auto-detect Kotlin version if not explicitly set by user
             if (!extension.kotlinVersion.isPresent) {
