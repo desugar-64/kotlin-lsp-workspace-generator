@@ -8,7 +8,6 @@
 ## Table of Contents
 
 - [How to Use This Plugin](#-how-to-use-this-plugin)
-- [Purpose](#-purpose)
 - [Quick Start](#-quick-start)
 - [Architecture](#️-architecture)
 - [Task Structure](#-task-structure)
@@ -90,12 +89,17 @@ This experimental plugin was created out of curiosity to explore if Android deve
    - **Use Terminal → Run Task to access Android build commands like "Android: Build Debug & Run", "Android: Install Debug", etc.**
 
 ### What You Get
-The [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) currently supports **JVM modules only** (Android/multiplatform support is on their roadmap). This plugin bridges that gap by helping [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) understand Android project dependencies:
+The [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) currently supports **JVM modules only** (Android/multiplatform support is on their roadmap). This plugin bridges that gap by solving the complex dependency setup problem for Android projects.
 
-- **Navigate to source** of AndroidX, Compose, and other Android libraries
-- **Code completion** for Android APIs and dependencies  
-- **Import resolution** and suggestions for Android libraries
-- **Syntax highlighting** with basic error detection
+**The Problem**: Android projects have complex dependency structures with AARs, multiple source sets, SDK libraries, and Compose compiler transformations. Without proper configuration, [LSP](https://github.com/Kotlin/kotlin-lsp) cannot find library JARs and source attachments, navigation to Android SDK sources fails, and code completion is limited to project sources only.
+
+**The Solution**: This plugin automatically detects your project structure and generates the correct workspace configuration for [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp), providing:
+
+- **Navigate to library sources** - Jump to definitions in AndroidX, Compose, and other dependencies
+- **Code completion** - Intelligent autocomplete for Kotlin and Android APIs
+- **Import resolution** - Automatically resolve and suggest imports for Android libraries
+- **Syntax highlighting** - Rich Kotlin syntax highlighting and error detection
+- **Cross-references** - Find usages and references across the project
 
 ### ⚠️ Important Limitations
 - **Jetpack Compose**: The plugin cannot fix Compose compiler issues. Compose uses compile-time transformations that [LSP](https://github.com/Kotlin/kotlin-lsp) doesn't understand, so you'll see type errors (code still compiles correctly)
@@ -113,27 +117,6 @@ A comprehensive Gradle plugin that generates workspace configuration files for t
 **Architecture**: Standalone Gradle plugin with composite build integration
 
 > **📦 Migration Note**: This plugin was recently migrated from `buildSrc` to a standalone module for better versioning, distribution, and development workflow. All functionality remains identical.
-
-## 🎯 Purpose
-
-The **Kotlin LSP Workspace Generator Plugin** solves the problem of setting up proper IDE-like support for Android Kotlin projects in lightweight editors. It automatically generates a `workspace.json` file that the [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) uses to:
-
-- **Navigate to library sources** - Jump to definitions in AndroidX, Compose, and other dependencies
-- **Code completion** - Intelligent autocomplete for Kotlin and Android APIs
-- **Import resolution** - Automatically resolve and suggest imports
-- **Syntax highlighting** - Rich Kotlin syntax highlighting and error detection
-- **Cross-references** - Find usages and references across the project
-
-### Problem Solved
-
-Android projects have complex dependency structures with AARs, multiple source sets, SDK libraries, and Compose compiler transformations. Without proper configuration:
-
-- [LSP](https://github.com/Kotlin/kotlin-lsp) cannot find library JARs and source attachments
-- Navigation to Android SDK sources fails
-- Compose-specific types are not recognized
-- Code completion is limited to project sources only
-
-This plugin **automatically detects** your project structure and **generates the correct workspace configuration** for [LSP](https://github.com/Kotlin/kotlin-lsp) without manual setup.
 
 ## ⚡ Quick Start
 
