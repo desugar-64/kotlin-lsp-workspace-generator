@@ -9,9 +9,9 @@
 
 - [How to Use This Plugin](#-how-to-use-this-plugin)
 - [Quick Start](#-quick-start)
+- [Configuration API](#️-configuration-api)
 - [Architecture](#️-architecture)
 - [Task Structure](#-task-structure)
-- [Configuration API](#️-configuration-api)
 - [VS Code Integration](#-vs-code-integration)
 - [Usage Examples](#-usage-examples)
 - [Auto-Detection Features](#-auto-detection-features)
@@ -71,8 +71,8 @@ This experimental plugin was created out of curiosity to explore if Android deve
 4. **Configure your Android app info:**
    ```kotlin
    kotlinLspWorkspace {
-       applicationId.set("com.yourapp.package")     // Your app's package name  
-       launcherActivity.set("MainActivity")         // Your main activity class
+       applicationId.set("com.yourapp.package")
+       launcherActivity.set("MainActivity")
    }
    ```
 
@@ -126,6 +126,33 @@ plugins {
 
 // Generate workspace
 ./gradlew generateKotlinLspWorkspace
+```
+
+## ⚙️ Configuration API
+
+The plugin provides a clean DSL with smart defaults and minimal required configuration:
+
+```kotlin
+kotlinLspWorkspace {
+    // Core LSP Configuration
+    workspaceFile.set(file("workspace.json"))          // Output location
+    includeTestDependencies.set(false)                 // Include test scopes
+    generateComposeStubs.set(true)                     // Compose support
+    copyJarsToTemp.set(true)                          // Path consistency
+    
+    // Auto-regeneration
+    autoRegenerate.set(true)                          // Rebuild on dependency changes
+    
+    // VS Code Integration  
+    generateVSCodeConfig.set(true)                    // Create .vscode/ files
+    vsCodeDirectory.set(file(".vscode"))              // VS Code config location
+    generateLaunchJson.set(true)                      // Android debugging setup
+    generateTasksJson.set(true)                       // Build task integration
+    
+    // Android App Launch Configuration (REQUIRED for VS Code tasks)
+    applicationId.set("com.yourapp.package")          // Your app's package name
+    launcherActivity.set("MainActivity")              // Your launcher activity class name
+}
 ```
 
 **⚠️ Known Issue**: Compose projects will show cosmetic type errors in [LSP](https://github.com/Kotlin/kotlin-lsp). See [Error Suppression](#-temporary-error-suppression) for workarounds.
@@ -245,33 +272,6 @@ fun processAarFile(aarFile: File, tempDir: File, targetJarName: String): File? {
 - **Template Processing**: Uses configurable templates for custom setups
 
 **Source**: [`GenerateVSCodeConfigTask.kt`](kotlin-lsp-workspace-gradle-plugin/src/main/kotlin/dev/serhiiyaremych/kotlin/lsp/GenerateVSCodeConfigTask.kt)
-
-## ⚙️ Configuration API
-
-The plugin provides a clean DSL with smart defaults and minimal required configuration:
-
-```kotlin
-kotlinLspWorkspace {
-    // Core LSP Configuration
-    workspaceFile.set(file("workspace.json"))          // Output location
-    includeTestDependencies.set(false)                 // Include test scopes
-    generateComposeStubs.set(true)                     // Compose support
-    copyJarsToTemp.set(true)                          // Path consistency
-    
-    // Auto-regeneration
-    autoRegenerate.set(true)                          // Rebuild on dependency changes
-    
-    // VS Code Integration  
-    generateVSCodeConfig.set(true)                    // Create .vscode/ files
-    vsCodeDirectory.set(file(".vscode"))              // VS Code config location
-    generateLaunchJson.set(true)                      // Android debugging setup
-    generateTasksJson.set(true)                       // Build task integration
-    
-    // Android App Launch Configuration (REQUIRED for VS Code tasks)
-    applicationId.set("com.yourapp.package")          // Your app's package name
-    launcherActivity.set("MainActivity")              // Your main activity class name
-}
-```
 
 ## 🎮 VS Code Integration
 
